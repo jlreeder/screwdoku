@@ -3,7 +3,7 @@ require 'colorize'
 
 class SudokuGame
   def self.from_file(filename)
-    board = self.from_file(filename)
+    board = board.from_file(filename)
     self.new(board)
   end
 
