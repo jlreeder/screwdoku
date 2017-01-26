@@ -42,6 +42,10 @@ class SudokuGame
     string.split(",").map { |char| Integer(char) }
   end
 
+  def parse_val(string)
+    Integer(string)
+  end
+
   def get_val
     val = nil
     until val && valid_val?(val)
