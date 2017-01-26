@@ -29,9 +29,8 @@ class SudokuGame
       print "> "
 
       begin
-        pos = parse_pos(gets)
+        pos = parse_pos(gets.chomp)
       rescue
-        TODO: Google how to print the error that happened inside of a rescue statement.
         puts "Invalid position entered (did you use a comma?)"
         puts ""
 
@@ -39,6 +38,14 @@ class SudokuGame
       end
     end
     pos
+  end
+
+  def parse_pos(string)
+    string.split(",").map { |char| Integer(char) }
+  end
+
+  def parse_val(string)
+    Integer(string)
   end
 
   def get_val
