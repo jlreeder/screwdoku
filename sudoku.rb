@@ -3,12 +3,12 @@ require 'colorize'
 
 class SudokuGame
   def self.from_file(filename)
-    board = board.from_file(filename)
+    board = Board.from_file(filename)
     self.new(board)
   end
 
   def initialize(board)
-    @board = [[]]
+    @board = board
   end
 
   def method_missing(method_name, *args)
