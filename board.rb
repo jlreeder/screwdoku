@@ -13,8 +13,8 @@ class Board
   def self.from_file(filename)
     rows = File.readlines(filename).map(&:chomp)
     tiles = rows.map do |row|
-      nums = row.split("").map { |char| parseInt(char) }
-      nums.map { |num| Tle.new(num) }
+      nums = row.split("").map { |char| Integer(char) }
+      nums.map { |num| Tile.new(num) }
     end
 
     self.new(tiles)
