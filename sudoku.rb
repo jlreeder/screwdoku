@@ -38,6 +38,10 @@ class SudokuGame
     pos
   end
 
+  def parse_pos(string)
+    string.split(",").map { |char| Integer(char) }
+  end
+
   def get_val
     val = nil
     until val && valid_val?(val)
